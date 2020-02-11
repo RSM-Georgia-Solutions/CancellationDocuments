@@ -52,6 +52,8 @@
     <Reference Include="SAPBusinessOneSDK" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\JournalEntriesController.cs" />
+    <Compile Include="Interfaces\IJournalEntries.cs" />
     <Compile Include="StaticData\Data.cs" />
     <None Include="CancellationDocuments.b1f">
       <FormCategory>UserForm</FormCategory>

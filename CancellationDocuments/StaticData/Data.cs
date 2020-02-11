@@ -8,7 +8,7 @@ namespace CancellationDocuments.StaticData
 {
     public static class Data
     {
-       public static Dictionary<int, string> MatketingTypes = new Dictionary<int, string>
+        public static readonly Dictionary<int, string> MatketingTypes = new Dictionary<int, string>
         {
             {13, "A/R Invoice"},
             {15, "Delivery"},
@@ -38,10 +38,15 @@ namespace CancellationDocuments.StaticData
             {234000032, "Goods Return Request"}
         };
 
-        public static Dictionary<int, string> PaymentTypes = new Dictionary<int, string>
+        public static readonly Dictionary<int, string> PaymentTypes = new Dictionary<int, string>
         {
             {24, "Incoming Payment"},
             {46,"Outgoing Payments" }
+        };
+        public static readonly Dictionary<int, string> JournalEntryes = new Dictionary<int, string>
+        {
+            {28, "Journal Voucher Entry"},
+            {30,"Journal Entry" }
         };
     }
 }

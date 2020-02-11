@@ -47,7 +47,7 @@ namespace CancellationDocuments
 
         private void OnCustomInitialize()
         {
-            FillOBjectType(ComboBox0, Data.PaymentTypes, Data.MatketingTypes);
+            FillOBjectType(ComboBox0, Data.PaymentTypes, Data.MatketingTypes, Data.JournalEntryes);
             ComboBox0.Select(0, BoSearchKey.psk_Index);
             ComboBox0.Item.DisplayDesc = true;
             StaticText0.Item.FontSize = 12;
@@ -64,7 +64,7 @@ namespace CancellationDocuments
         private SAPbouiCOM.StaticText StaticText1;
         private SAPbouiCOM.Button Button1;
 
-    
+
 
         private void FillOBjectType(ComboBox comboBox, params Dictionary<int, string>[] docTypes)
         {
@@ -125,6 +125,30 @@ namespace CancellationDocuments
                     }
                 }
             }
+            else if (Data.JournalEntryes.ContainsKey(objectType))
+            {
+                JournalEntriesController jController = new JournalEntriesController();
+
+                JournalEntries erntry = (JournalEntries)DiManager.Company.GetBusinessObject(BoObjectTypes.oJournalEntries);
+                foreach (string docNum in docNums)
+                {
+                    erntry.GetByKey(int.Parse(docNum));
+                    try
+                    {
+                        jController.Cancel(erntry);
+                        progress++;
+                        Application.SBO_Application.SetStatusBarMessage($"{progress} Of {totalDocs}",
+                            BoMessageTime.bmt_Short, false);
+                    }
+                    catch (Exception ex)
+                    {
+                        progress++;
+                        Application.SBO_Application.MessageBox(ex.Message);
+                    }
+                }
+
+            }
+
         }
 
 
