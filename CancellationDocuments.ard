@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="RSM" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="Document Cancellation" ExtVersion="1.13" Contdata="nkurdadze@rsm.ge" Partner="RSM" DBType="Both" ClientType="W">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="" To="" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository>
+      <Properties />
+    </Repository>
+    <Deployment>
+      <Properties />
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="" AddonSig="">
+        <Installation>
+          <Files />
+        </Installation>
+        <Uninstallation>
+          <Files />
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="C:\RSM\Source\CancellationDocuments\CancellationDocuments\bin\Debug\CancellationDocuments.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="Antlr3.Runtime.dll">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.b1s">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.exe">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.pdb">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.vshost.exe.manifest">
+              <Actions />
+            </File>
+            <File FileName="ConverterLib_x64.dll">
+              <Actions />
+            </File>
+            <File FileName="SAPBusinessOneSDK.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="Antlr3.Runtime.dll">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.b1s">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.exe">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.pdb">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="CancellationDocuments.vshost.exe.manifest">
+              <Actions />
+            </File>
+            <File FileName="ConverterLib_x64.dll">
+              <Actions />
+            </File>
+            <File FileName="SAPBusinessOneSDK.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>

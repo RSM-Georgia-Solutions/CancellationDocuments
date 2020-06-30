@@ -14,8 +14,17 @@ namespace CancellationDocuments.Controllers
             Documents marketingDocmunet = (Documents)document;
             if (marketingDocmunet.Cancelled == BoYesNoEnum.tNO)
             {
+                int res = 0;
                 Documents cancelationMarketingDocument = marketingDocmunet.CreateCancellationDocument();
-                int res = cancelationMarketingDocument.Add();
+
+                if (cancelationMarketingDocument == null)
+                {
+                    res = marketingDocmunet.Cancel();
+                }
+                else
+                {
+                    res = cancelationMarketingDocument.Add();
+                }
                 if (res == 0)
                 {
                     return true;
